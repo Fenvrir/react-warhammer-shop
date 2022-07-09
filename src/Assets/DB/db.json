@@ -1,0 +1,103 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120102142_CSMCombatPatrolLead.jpg",
+      "types": [0],
+      "sizes": [15, 26],
+      "price": 5940,
+      "category": 0,
+      "rating": 4
+    },
+    {
+      "id": 1,
+      "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/60010199037_KT2Group1.jpg",
+      "types": [0, 1],
+      "sizes": [15, 26, 38],
+      "price": 2310,
+      "category": 0,
+      "rating": 4
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120101177_TriumvirateofthePrimarch06.jpg",
+      "types": [0, 1],
+      "sizes": [15, 26, 38],
+      "price": 5940,
+      "category": 0,
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120101353_HonouredoftheChapterLead.jpg",
+      "types": [0, 1],
+      "sizes": [15, 26, 38],
+      "price": 2112,
+      "category": 0,
+      "rating": 4
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120101128_SpaceMarineTacticalSquadReformat01.jpg",
+      "types": [0],
+      "sizes": [15, 26, 38],
+      "price": 1584,
+      "category": 0,
+      "rating": 4
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120114001_KrootCarnivoreSquadNEW01.jpg",
+      "types": [0, 1],
+      "sizes": [15, 26, 38],
+      "price": 4312,
+      "category": 0,
+      "rating": 4
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120108015_IKArmigerHelverins01.jpg",
+      "types": [0, 1],
+      "sizes": [15, 26, 38],
+      "price": 3422,
+      "category": 0,
+      "rating": 4
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120105049_ManticoreNEW01.jpg",
+      "types": [0, 1],
+      "sizes": [15, 26, 38],
+      "price": 2310,
+      "category": 0,
+      "rating": 4
+    },
+    {
+      "id": 8,
+      "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120103021_StompaNEW01.jpg",
+      "types": [0, 1],
+      "sizes": [15, 26, 38],
+      "price": 5280,
+      "category": 0,
+      "rating": 4
+    },
+    {
+      "id": 9,
+      "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120102114_DGChosenofMortarionLead.jpg",
+      "types": [0, 1],
+      "sizes": [15, 26, 38],
+      "price": 2640,
+      "category": 0,
+      "rating": 4
+    },
+    {
+      "id": 10,
+      "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120106024_Harpies01.jpg",
+      "types": [0, 1],
+      "sizes": [15, 26, 38],
+      "price": 3422, 
+      "category": 0,
+      "rating": 4
+    }
+  ]
+}
