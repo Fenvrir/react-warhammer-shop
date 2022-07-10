@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const ContentItem = ({ imageUrl, types, sizes, price, category, rating }) => {
+const ContentItem = ({ imageUrl, types, sizes, price, title, category, rating }) => {
   const [itemCounter, setItemCounter] = useState(0);
   const [activeType, setActiveType] = useState(0);
   const [activeSize, setActiveSize] = useState(0);
@@ -13,7 +13,7 @@ const ContentItem = ({ imageUrl, types, sizes, price, category, rating }) => {
   return (
     <div className="item-block">
       <img className="item-block__image" src={imageUrl} alt="item" />
-      <h4 className="item-block__title">Tactical Squad</h4>
+      <h4 className="item-block__title">{title}</h4>
       <div className="item-block__selector">
         <ul>
           {types.map((type, index) => {

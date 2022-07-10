@@ -2,6 +2,7 @@
   "products": [
     {
       "id": 0,
+      "title":"Combat Patrol: Chaos Space Marines",
       "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120102142_CSMCombatPatrolLead.jpg",
       "types": [0],
       "sizes": [15, 26],
@@ -11,6 +12,7 @@
     },
     {
       "id": 1,
+      "title":"Kill Team: Veteran Guardsmen",
       "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/60010199037_KT2Group1.jpg",
       "types": [0, 1],
       "sizes": [15, 26, 38],
@@ -20,6 +22,7 @@
     },
     {
       "id": 2,
+      "title":"Cypher",
       "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120101177_TriumvirateofthePrimarch06.jpg",
       "types": [0, 1],
       "sizes": [15, 26, 38],
@@ -29,6 +32,7 @@
     },
     {
       "id": 3,
+      "title":"Space Marines: Honoured of the Chapter",
       "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120101353_HonouredoftheChapterLead.jpg",
       "types": [0, 1],
       "sizes": [15, 26, 38],
@@ -38,6 +42,7 @@
     },
     {
       "id": 4,
+      "title":"Tactical Squad",
       "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120101128_SpaceMarineTacticalSquadReformat01.jpg",
       "types": [0],
       "sizes": [15, 26, 38],
@@ -47,6 +52,7 @@
     },
     {
       "id": 5,
+      "title":"Kroot Carnivore Squad",
       "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120114001_KrootCarnivoreSquadNEW01.jpg",
       "types": [0, 1],
       "sizes": [15, 26, 38],
@@ -56,6 +62,7 @@
     },
     {
       "id": 6,
+      "title":"Armiger Helverins",
       "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120108015_IKArmigerHelverins01.jpg",
       "types": [0, 1],
       "sizes": [15, 26, 38],
@@ -65,6 +72,7 @@
     },
     {
       "id": 7,
+      "title":"Manticore",
       "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120105049_ManticoreNEW01.jpg",
       "types": [0, 1],
       "sizes": [15, 26, 38],
@@ -74,6 +82,7 @@
     },
     {
       "id": 8,
+      "title":"Stompa",
       "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120103021_StompaNEW01.jpg",
       "types": [0, 1],
       "sizes": [15, 26, 38],
@@ -83,6 +92,7 @@
     },
     {
       "id": 9,
+      "title":"Chosen of Mortarion",
       "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120102114_DGChosenofMortarionLead.jpg",
       "types": [0, 1],
       "sizes": [15, 26, 38],
@@ -92,6 +102,7 @@
     },
     {
       "id": 10,
+      "title":"XXX",
       "imageUrl": "https://www.games-workshop.com/resources/catalog/product/600x620/99120106024_Harpies01.jpg",
       "types": [0, 1],
       "sizes": [15, 26, 38],
