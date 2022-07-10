@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    .textBlock {
+        max-width: 400px;
+        h2{
+            margin-bottom: 20px;
+        }
+    }
+    .imgBlock {
+        img {
+            width: 400px;
+        }
+    }
+}

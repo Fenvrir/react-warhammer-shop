@@ -2,6 +2,7 @@ import './scss/app.scss'
 import './App.css';
 import Header from './Components/Header/Header';
 import Content from './Components/Content/Content';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <div className="wrapper">
        <Header />
        <Content/>
+       <Footer/>
       </div>
     </div>
   );
