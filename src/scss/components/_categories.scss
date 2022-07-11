@@ -1,6 +1,9 @@
 @import '../variables.scss';
 
 .categories {
+  @media(max-width: 985px) {
+    display: none;
+  }
   ul {
     display: flex;
 
