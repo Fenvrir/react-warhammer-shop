@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 
-const Sort = () => {
+const Sort = ({ sortType, setSortType }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [sortType, setSortType] = useState(0);
-  const typeList = ["популярности", "цене", "алфавиту"];
+  const typeList = [
+    { name: "популярности", sortName: "rating" },
+    { name: "цене (воз.)", sortName: "price" },
+    { name: "цене (убыв.)", sortName: "-price" },
+    { name: "алфавиту", sortName: "title" },
+  ];
+
   const popupHandler = (type) => {
     setIsVisible(!isVisible);
-    setSortType(type)
+    setSortType(type);
   };
 
   return (
-    <div  className="sort">
+    <div className="sort">
       <div className="sort__label">
         <svg
           width="10"
@@ -25,15 +30,21 @@ const Sort = () => {
           />
         </svg>
         <b>Сортировка по:</b>
-        <span  onClick={() => setIsVisible(!isVisible)} >{typeList[sortType]}</span>
+        <span onClick={() => setIsVisible(!isVisible)}>{sortType.name}</span>
       </div>
       {isVisible && (
         <div className="sort__popup">
           <ul>
-            {typeList.map((type, index) => {
+            {typeList.map((obj, index) => {
               return (
-                <li key={index} onClick={() => {popupHandler(index)}} className={sortType === index ? "active" : ""}>
-                  {type}
+                <li
+                  key={index}
+                  onClick={() => {
+                    popupHandler(obj);
+                  }}
+                  className={sortType.name === obj.name ? "active" : ""}
+                >
+                  {obj.name}
                 </li>
               );
             })}
