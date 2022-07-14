@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/react-warhammer-shop/static/css/main.9bd2c091.css",
-    "main.js": "/react-warhammer-shop/static/js/main.4bda2417.js",
+    "main.js": "/react-warhammer-shop/static/js/main.9811ebf5.js",
     "static/js/787.a6ce37e7.chunk.js": "/react-warhammer-shop/static/js/787.a6ce37e7.chunk.js",
     "static/media/404.webp": "/react-warhammer-shop/static/media/404.ba9bf284f49a9d149ccb.webp",
     "index.html": "/react-warhammer-shop/index.html",
     "main.9bd2c091.css.map": "/react-warhammer-shop/static/css/main.9bd2c091.css.map",
-    "main.4bda2417.js.map": "/react-warhammer-shop/static/js/main.4bda2417.js.map",
+    "main.9811ebf5.js.map": "/react-warhammer-shop/static/js/main.9811ebf5.js.map",
     "787.a6ce37e7.chunk.js.map": "/react-warhammer-shop/static/js/787.a6ce37e7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9bd2c091.css",
-    "static/js/main.4bda2417.js"
+    "static/js/main.9811ebf5.js"
   ]
 }
