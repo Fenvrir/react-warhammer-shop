@@ -1,12 +1,11 @@
 import React from "react";
-import { useState } from "react";
 
-export default function Categories() {
-  const [active, setActive] = useState(0);
+export default function Categories({category, setCategory}) {
+  
   const arrayOfCategories = [
+    "40.000",
     "Age Of Sigmar",
     "Horus Hersey",
-    "40.000",
     "Middle Earth",
     "Black Library",
   ];
@@ -18,8 +17,8 @@ export default function Categories() {
           return (
             <li
               key={index}
-              onClick={() => setActive(index)}
-              className={active === index ? "active" : "" }
+              onClick={() => setCategory(index)}
+              className={category === index ? "active" : "" }
             >
               {item}
             </li>

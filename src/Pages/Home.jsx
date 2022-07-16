@@ -1,4 +1,4 @@
-import React, {  useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Sort from "../Components/Content/Sort/Sort";
 import Skeleton from "../Components/FakeBlocks/Skeleton";
 import Categories from "../Components/Content/Categories/Categories";
@@ -8,15 +8,22 @@ const Home = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [sortType, setSortType] = useState({
-    name : 'популярности',
-    sortName: 'rating'
+    name: "популярности",
+    sortName: "rating",
   });
+  const [category, setCategory] = useState(null);
 
   useEffect(() => {
-    let sortName = sortType.sortName.replace('-', '');
-    let order = `?sortBy=${sortName}&order=${sortType.sortName.includes('-') ? 'desc' : 'asc'}`;
+    let sortName = sortType.sortName.replace("-", "");
+    let sortCategory = category !=null ? "category=" + category + "&" : "";
+    let order = `${sortCategory}&sortBy=${sortName}&order=${
+      sortType.sortName.includes("-") ? "desc" : "asc"
+    }`;
+
     setIsLoading(true);
-    fetch(`https://62ca7ecd1eaf3786ebac26cc.mockapi.io/warhammer/product${order}`)
+    fetch(
+      `https://62ca7ecd1eaf3786ebac26cc.mockapi.io/warhammer/product?${order}`
+    )
       .then((response) => {
         return response.json();
       })
@@ -24,18 +31,14 @@ const Home = () => {
         setProducts(json);
         setIsLoading(false);
       });
-      window.scroll(0, 0);
-  }, [sortType]);
+    window.scroll(0, 0);
+  }, [sortType, category]);
 
- 
   return (
     <div className="container">
       <div className="content__top">
-        <Categories />
-        <Sort
-          sortType={sortType}
-          setSortType={setSortType}
-        />
+        <Categories category={category} setCategory={setCategory} />
+        <Sort sortType={sortType} setSortType={setSortType} />
       </div>
       <h2 className="content__title">Все товары</h2>
       <div className="content__items">
