@@ -4,42 +4,38 @@ import Skeleton from "../Components/FakeBlocks/Skeleton";
 import Categories from "../Components/Content/Categories/Categories";
 import ContentItem from "../Components/Content/ContentItem/ContentItem";
 import Pagination from "../Components/Pagination/Pagination";
+import { useDispatch, useSelector } from "react-redux";
+import { setProducts } from "../Components/Redux/Slices/productsSlice";
 
-const Home = ({ searchValue }) => {
-  const [products, setProducts] = useState([]);
+const Home = () => {
+  const dispatch = useDispatch();
+  const {products, sortType, category, currentPage} = useSelector((state) => state.productsSlice);
+  const searchValue = useSelector((state) => state.search.searchValue);
+  
   const [isLoading, setIsLoading] = useState(true);
-  const [sortType, setSortType] = useState({
-    name: "популярности",
-    sortName: "rating",
-  });
-  const [category, setCategory] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [pageCount, setPageCount] = useState(3);
+ 
 
   useEffect(() => {
     let sortName = sortType.sortName.replace("-", "");
-    let sortCategory = category != null ? "category=" + category + "&" : "";
-    let order = `${sortCategory}&sortBy=${sortName}&order=${
+    let sortCategory = category != null ? "&category=" + category : "";
+    let order = `&sortBy=${sortName}${sortCategory}&order=${
       sortType.sortName.includes("-") ? "desc" : "asc"
     }`;
     let search = searchValue ? `&search=${searchValue}` : "";
 
-    if (sortName === 1 || sortName === 2) {
-      setPageCount(1);
-    } 
     setIsLoading(true);
     fetch(
-      `https://62ca7ecd1eaf3786ebac26cc.mockapi.io/warhammer/product?page=${currentPage}&limit=8&${order}${search}`
+      `https://62ca7ecd1eaf3786ebac26cc.mockapi.io/warhammer/product?page=${currentPage}&limit=8${order}${search}`
     )
       .then((response) => {
         return response.json();
       })
       .then((json) => {
-        setProducts(json);
+        dispatch(setProducts(json));
         setIsLoading(false);
       });
     window.scroll(0, 0);
-  }, [sortType, category, searchValue, currentPage]);
+  }, [sortType, category, searchValue, currentPage, dispatch]);
 
   const skeleton = [...new Array(8)].map((_, index) => {
     return <Skeleton key={index} />;
@@ -49,15 +45,17 @@ const Home = ({ searchValue }) => {
   });
 
   return (
-    <div className="container">
+    <>
       <div className="content__top">
-        <Categories category={category} setCategory={setCategory} />
-        <Sort sortType={sortType} setSortType={setSortType} />
+        <Categories />
+        <Sort  />
       </div>
-      <h2 className="content__title">Все товары</h2>
-      <div className="content__items">{isLoading ? skeleton : items}</div>
-      <Pagination setCurrentPage={setCurrentPage} pageCount={pageCount} />
-    </div>
+      <div className="container">
+        <h2 className="content__title">Все товары</h2>
+        <div className="content__items">{isLoading ? skeleton : items}</div>
+        <Pagination />
+      </div>
+    </>
   );
 };
 

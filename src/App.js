@@ -6,12 +6,11 @@ import Footer from './Components/Footer/Footer';
 import { useState } from 'react';
 
 function App() {
-const [searchValue, setSearchValue] = useState('');
   return (
     <div className="App">
       <div className="wrapper">
-       <Header searchValue={searchValue} setSearchValue={setSearchValue}/>
-       <Content searchValue={searchValue} />
+       <Header />
+       <Content />
        <Footer/>
       </div>
     </div>

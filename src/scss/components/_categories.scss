@@ -1,33 +1,39 @@
-@import '../variables.scss';
+@import "../variables.scss";
 
 .categories {
-  @media(max-width: 985px) {
+  margin-left:  5%;
+  @media (max-width: 985px) {
     display: none;
   }
   ul {
     display: flex;
-
+    align-items: center;
+    justify-content: center;
+    height: 80px;
     li {
-      background-color: #f9f9f9;
-      padding: 13px 30px;
-      border-radius: 30px;
-      margin-right: 10px;
       font-weight: bold;
       cursor: pointer;
       transition: background-color 0.1s ease-in-out;
       @include noselect();
-
+      padding: 1rem 1em;
+      height: inherit;
       &:hover {
-        background-color: darken(#f9f9f9, 2%);
+        background-color: #424242;
       }
-
-      &:active {
-        background-color: darken(#f9f9f9, 5%);
-      }
-
       &.active {
-        background-color: #282828;
-        color: #fff;
+        background: linear-gradient(
+          to right,
+          #dc9014 0%,
+          #f6e27e 50%,
+          #dc9014 100%
+        );
+        background-size: 100% 2px;
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+      }
+      .categories__img{
+        width: 98%;
+        height: 95%;
       }
     }
   }

@@ -1,7 +1,9 @@
-@import '../variables.scss';
+@import "../variables.scss";
 
 .sort {
   position: relative;
+  margin-right: 5%;
+
   &__label {
     display: flex;
     align-items: center;
@@ -12,12 +14,20 @@
 
     b {
       margin-right: 8px;
+      color: $white;
+      @media (max-width: 985px) {
+        color: $black;
+      }
     }
 
     span {
       color: $black;
-      border-bottom: 1px dashed $black;
+      color: $white;
+      border-bottom: 1px dashed $white;
       cursor: pointer;
+      @media (max-width: 985px) {
+        color: $black;
+      }
     }
   }
 
