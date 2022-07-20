@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Search from "../Search/Search";
 
-const Header = ({}) => {
+const Header = ({...props}) => {
   return (
     <div className="header">
       <div className="container">
@@ -10,11 +10,12 @@ const Header = ({}) => {
           <div className="header__logo">
             <img
               style={{
-                backgroundColor: "black",
+                backgroundColor: "#fff",
                 padding: "0 10px",
                 borderRadius: "5px",
+                width:"156px",
               }}
-              src="https://www.games-workshop.com/resources/static/header-2017/GW-BL-Logo-Update.png"
+              src="https://www.games-workshop.com/resources/static/header-2017/gw-logo-default-stacked.svg"
               alt="BL logo"
             />
             <div>

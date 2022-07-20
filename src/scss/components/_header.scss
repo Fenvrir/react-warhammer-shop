@@ -1,30 +1,51 @@
-@import '../variables.scss';
+@import "../variables.scss";
 
 .header {
   border-bottom: 1px solid $gray-line;
   padding: 40px 0;
   margin-bottom: 40px;
+  & {
+    @media (max-width: 850px) {
+      margin-bottom: 20px;
+      padding: 40px 0 20px 0;
+    }
+  }
 
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: 450px) {
+    @media (max-width: $width-pc-sm) {
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    @media (max-width: 564px) {
       flex-direction: column;
     }
   }
-
+  &a {
+    @media (max-width: $width-change-order) {
+    order: 1;
+    }
+  }
+  &__cart {
+    @media (max-width: $width-change-order) {
+      order: 2;
+      }
+  }
   &__logo {
     display: flex;
 
-    @media (max-width: 450px) {
-     margin-bottom: 15px;
+    @media (max-width: $width-mobile-sm) {
+      margin-bottom: 15px;
+      justify-self: end;
     }
 
     img {
       margin-right: 15px;
-      @media (max-width: 639px) {
+      @media (max-width: $width-pc) {
         display: none;
       }
     }
